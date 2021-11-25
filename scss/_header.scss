@@ -1,0 +1,78 @@
+@mixin border-bot {
+    border-bottom: 1px solid $color-line;
+}
+@mixin border-lt {
+    border-left: 1px solid $color-line;
+}
+
+body {
+    font-family: $font-main;
+}
+
+.header {
+    margin: 0 auto;
+}
+
+.row-wrap {
+    @include border-bot;
+}
+
+.header__row-sub {
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 1412px;
+    .form-search {
+        @include border-lt;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 340px;
+        height: 40px;
+        &:hover {
+            background-color: $color-hover-form;
+        }
+        &:hover > .btn-search {
+            color: $color-hover-txt;
+        }
+        .inp-search {
+            margin-left: 20px;
+            width: 220px;
+            border: none;
+            background: none;
+        }
+        .btn-search {
+            margin-right: 15px;
+            border: none;
+            background: none;
+            font-size: 14px;
+            font-stretch: condensed;// 글자장평조정
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .menu-sub {
+        padding-left: 30px;
+        @include border-lt;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        li {
+            font-family: $font-sub;
+            font-size: 13px;
+            margin-left: 30px;
+            &:hover {
+                color: $color-hover-txt;
+            }
+        }
+    }
+}
+
+.header__row-main {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1412px;
+}

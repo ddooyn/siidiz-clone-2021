@@ -1,0 +1,101 @@
+body {
+  font-family: "Gothic A1", sans-serif;
+}
+
+.header {
+  margin: 0 auto;
+}
+
+.row-wrap {
+  border-bottom: 1px solid #bcbcbc;
+}
+
+.header__row-sub {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1412px;
+}
+
+.header__row-sub .form-search {
+  border-left: 1px solid #bcbcbc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 340px;
+  height: 40px;
+}
+
+.header__row-sub .form-search:hover {
+  background-color: #eeeeee;
+}
+
+.header__row-sub .form-search:hover > .btn-search {
+  color: #002BD2;
+}
+
+.header__row-sub .form-search .inp-search {
+  margin-left: 20px;
+  width: 220px;
+  border: none;
+  background: none;
+}
+
+.header__row-sub .form-search .btn-search {
+  margin-right: 15px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-stretch: condensed;
+}
+
+.header__row-sub .form-search .btn-search:hover {
+  cursor: pointer;
+}
+
+.header__row-sub .menu-sub {
+  padding-left: 30px;
+  border-left: 1px solid #bcbcbc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+}
+
+.header__row-sub .menu-sub li {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 13px;
+  margin-left: 30px;
+}
+
+.header__row-sub .menu-sub li:hover {
+  color: #002BD2;
+}
+
+.header__row-main {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1412px;
+}
+/*# sourceMappingURL=style.css.map */
