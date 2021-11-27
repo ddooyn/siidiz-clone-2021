@@ -1,78 +1,149 @@
 @mixin border-bot {
-    border-bottom: 1px solid $color-line;
+  border-bottom: 1px solid $color-line;
 }
 @mixin border-lt {
-    border-left: 1px solid $color-line;
+  border-left: 1px solid $color-line;
 }
 
 body {
-    font-family: $font-main;
+  font-family: $font-main;
+  height: 200vh;
 }
 
 .header {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .row-wrap {
-    @include border-bot;
+  padding: 0 20px;
+  @include border-bot;
 }
 
 .header__row-sub {
-    margin: 0 auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 1412px;
+  .form-search {
+    @include border-lt;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    max-width: 1412px;
-    .form-search {
-        @include border-lt;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 340px;
-        height: 40px;
-        &:hover {
-            background-color: $color-hover-form;
-        }
-        &:hover > .btn-search {
-            color: $color-hover-txt;
-        }
-        .inp-search {
-            margin-left: 20px;
-            width: 220px;
-            border: none;
-            background: none;
-        }
-        .btn-search {
-            margin-right: 15px;
-            border: none;
-            background: none;
-            font-size: 14px;
-            font-stretch: condensed;// 글자장평조정
-            &:hover {
-                cursor: pointer;
-            }
-        }
+    width: 340px;
+    height: 40px;
+    &:hover {
+      background-color: $color-hover-form;
     }
-    .menu-sub {
-        padding-left: 30px;
-        @include border-lt;
-        display: flex;
-        align-items: center;
-        height: 40px;
-        li {
-            font-family: $font-sub;
-            font-size: 13px;
-            margin-left: 30px;
-            &:hover {
-                color: $color-hover-txt;
-            }
-        }
+    &:hover > .btn-search {
+      color: $color-hover-txt;
     }
+    .inp-search {
+      margin-left: 20px;
+      width: 220px;
+      border: none;
+      background: none;
+    }
+    .btn-search {
+      margin-right: 15px;
+      border: none;
+      background: none;
+      font-size: 14px;
+      font-stretch: condensed; // 글자장평조정
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .menu-sub {
+    padding-left: 30px;
+    @include border-lt;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    li {
+      font-family: $font-sub;
+      font-weight: 700;
+      font-size: 13px;
+      margin-left: 30px;
+      &:hover {
+        color: $color-hover-txt;
+      }
+    }
+  }
 }
 
 .header__row-main {
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    max-width: 1412px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  //   align-items: center;
+  line-height: 68px;
+  max-width: 1412px;
+  height: 60px;
+  font-weight: 900;
+  h1 {
+    font-size: 28px;
+  }
+}
+
+.gnb-menu__sub {
+  display: none;
+}
+
+.gnb-main {
+  display: flex;
+  font-size: 14.5px;
+  .gnb-menu {
+    position: relative;
+    &:hover {
+      color: $color-hover-txt;
+      cursor: pointer;
+      .gnb-menu__sub {
+        display: block;
+      }
+    }
+    &:not(:first-of-type) {
+      margin-left: 60px;
+    }
+  }
+}
+
+.gnb-menu__sub {
+  padding: 25px 40px 25px 30px;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #282828;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2.5em;
+  color: white;
+  .tit-menu__sub {
+    margin-top: 20px;
+    font-weight: 700;
+    line-height: 3em;
+  }
+  li:hover {
+    color: $color-hover-txt-sub;
+  }
+}
+
+.grid-menu__sub {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  &:hover {
+    color: inherit;
+  }
+  .grid-menu-lt {
+    padding-right: 30px;
+    border-right: 1px solid #444444;
+  }
+  .grid-menu-rt {
+    span {
+      margin-right: 15px;
+    }
+  }
 }

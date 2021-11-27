@@ -1,5 +1,6 @@
 body {
   font-family: "Gothic A1", sans-serif;
+  height: 200vh;
 }
 
 .header {
@@ -7,6 +8,7 @@ body {
 }
 
 .row-wrap {
+  padding: 0 20px;
   border-bottom: 1px solid #bcbcbc;
 }
 
@@ -44,7 +46,7 @@ body {
 }
 
 .header__row-sub .form-search:hover > .btn-search {
-  color: #002BD2;
+  color: #002bd2;
 }
 
 .header__row-sub .form-search .inp-search {
@@ -80,12 +82,13 @@ body {
 
 .header__row-sub .menu-sub li {
   font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
   font-size: 13px;
   margin-left: 30px;
 }
 
 .header__row-sub .menu-sub li:hover {
-  color: #002BD2;
+  color: #002bd2;
 }
 
 .header__row-main {
@@ -96,6 +99,85 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  line-height: 68px;
   max-width: 1412px;
+  height: 60px;
+  font-weight: 900;
+}
+
+.header__row-main h1 {
+  font-size: 28px;
+}
+
+.gnb-menu__sub {
+  display: none;
+}
+
+.gnb-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14.5px;
+}
+
+.gnb-main .gnb-menu {
+  position: relative;
+}
+
+.gnb-main .gnb-menu:hover {
+  color: #002bd2;
+  cursor: pointer;
+}
+
+.gnb-main .gnb-menu:hover .gnb-menu__sub {
+  display: block;
+}
+
+.gnb-main .gnb-menu:not(:first-of-type) {
+  margin-left: 60px;
+}
+
+.gnb-menu__sub {
+  padding: 25px 40px 25px 30px;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #282828;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2.5em;
+  color: white;
+}
+
+.gnb-menu__sub .tit-menu__sub {
+  margin-top: 20px;
+  font-weight: 700;
+  line-height: 3em;
+}
+
+.gnb-menu__sub li:hover {
+  color: #2259f2;
+}
+
+.grid-menu__sub {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.grid-menu__sub:hover {
+  color: inherit;
+}
+
+.grid-menu__sub .grid-menu-lt {
+  padding-right: 30px;
+  border-right: 1px solid #444444;
+}
+
+.grid-menu__sub .grid-menu-rt span {
+  margin-right: 15px;
 }
 /*# sourceMappingURL=style.css.map */

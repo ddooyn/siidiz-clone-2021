@@ -1,56 +1,131 @@
+<!-- - 마크업 순서 다시 고려
+- 아이콘 넣기
+- fieldset 넣어보기
+- scss 준홍님 공유해주신 사이트 참고해서 폴더 구성
+- scss 은정멘토님 코드 참고해서 flex mixin쓰기  -->
+
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        시이디즈 쇼핑몰
-    </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시이디즈 쇼핑몰</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700;900&family=Noto+Sans+KR:wght@300&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="src/reset.css">
-    <link rel="stylesheet" href="scss/style.css">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700;900&family=Noto+Sans+KR:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/reset.css" />
+    <link rel="stylesheet" href="scss/style.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <h2 class="sr-only">시이디즈 상단 메뉴</h2>
-        <section class="row-wrap">
-            <article class="header__row-sub">
-                <form action="" method="get" class="form-search">
-                    <input type="text" autocomplete="off" id="search" class="inp-search">
-                    <label for="search" class="sr-only">검색 입력창</label>
-                    <button class="btn-search">SEARCH</button>
-                </form>
-                <nav>
-                    <ul class="menu-sub">
-                        <li><a href="javascript:void(0)">로그인</a></li>
-                        <li><a href="javascript:void(0)">회원가입</a></li>
-                        <li><a href="javascript:void(0)">이벤트</a></li>
-                        <li><a href="javascript:void(0)">비교하기</a></li>
-                        <li><a href="javascript:void(0)">장바구니</a></li>
+      <h2 class="sr-only">시이디즈 상단 메뉴</h2>
+      <section class="row-wrap">
+        <article class="header__row-sub">
+          <!-- fieldset -->
+          <form action="" method="get" class="form-search">
+            <input
+              type="text"
+              autocomplete="off"
+              id="search"
+              class="inp-search"
+            />
+            <label for="search" class="sr-only">검색 입력창</label>
+            <button class="btn-search">SEARCH</button>
+          </form>
+          <nav>
+            <ul class="menu-sub">
+              <li><a href="javascript:void(0)">로그인</a></li>
+              <li><a href="javascript:void(0)">회원가입</a></li>
+              <li><a href="javascript:void(0)">이벤트</a></li>
+              <li><a href="javascript:void(0)">비교하기</a></li>
+              <li><a href="javascript:void(0)">장바구니</a></li>
+            </ul>
+          </nav>
+        </article>
+      </section>
+      <section class="row-wrap">
+        <article class="header__row-main">
+          <h1><a href="index.html">SIIDIZ</a></h1>
+          <nav>
+            <ul class="gnb-main">
+              <li class="gnb-menu">
+                ABOUT SIIDIZ
+                <ul class="gnb-menu__sub">
+                  <li>BRAND STORY</li>
+                  <li>NEWS</li>
+                  <li class="tit-menu__sub">특별관</li>
+                  <li>월간윤종신</li>
+                  <li>기대요 프로젝트</li>
+                  <li>T50 10주년</li>
+                </ul>
+              </li>
+              <li class="gnb-menu">
+                PRODUCTS
+                <ul class="gnb-menu__sub">
+                  <li class="grid-menu__sub">
+                    <ul class="grid-menu-lt">
+                      <li>모든 제품보기</li>
+                      <li>브랜드 콜라보레이션</li>
+                      <li>마블x시디즈 태스크</li>
+                      <li>디즈니x시디즈 키즈</li>
+                      <li>사무용의자</li>
+                      <li>학생용의자</li>
+                      <li>유아용의자</li>
+                      <li>중역용의자</li>
+                      <li>회의실/컨퍼런스의자</li>
+                      <li>인테리어의자</li>
+                      <li>스몰/좌식의자</li>
+                      <li>액세서리</li>
                     </ul>
-                </nav>
-            </article>
-        </section>
-        <section class="row-wrap">
-            <article class="header__row-main">
-                <h1>SIIDIZ</h1>
-                <nav>
-                    <ul class="menu-main">
-                        <li>ABOUT SIDIZ</li>
-                        <li>PRODUCTS</li>
-                        <li>SUPPORT</li>
+                    <ul class="grid-menu-rt">
+                      <li>SMART FINDER</li>
+                      <li><span>마블</span><span>디즈니</span></li>
+                      <li><span>T80</span> <span>T50</span></li>
+                      <li><span>atti</span> <span>ringo cover</span></li>
+                      <li>
+                        <span>T80</span> <span>T55</span><span>T50 AIR</span
+                        ><span>T50</span><span>T40</span><span>T25</span
+                        ><span>TAB SQUARE</span><span>TAB PLUS</span>
+                      </li>
+                      <li>
+                        <span>ringo</span> <span>mitto</span> <span>ible</span
+                        ><span>T25</span><span>T50</span>
+                      </li>
+                      <li><span>molti</span> <span>atti</span></li>
+                      <li><span></span></li>
+                      <li><span></span></li>
+                      <li><span></span></li>
+                      <li><span></span></li>
+                      <li><span></span></li>
                     </ul>
-                </nav>
-            </article>
-        </section>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb-menu">
+                SUPPORT
+                <ul class="gnb-menu__sub">
+                  <li>FAQ</li>
+                  <li>친절상담</li>
+                  <li>A/S 신청</li>
+                  <li>A/S 안내</li>
+                  <li>매장 찾기</li>
+                  <li>품질 보증 서비스</li>
+                  <li>제품설명서 다운로드</li>
+                  <li>카탈로그 다운로드</li>
+                  <li>사업제안</li>
+                  <li>대리점 개설문의</li>
+                  <li>대량 구매 문의</li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </article>
+      </section>
     </header>
-</body>
-
+  </body>
 </html>
