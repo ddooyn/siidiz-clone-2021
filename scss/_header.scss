@@ -120,6 +120,7 @@ body {
   font-weight: 400;
   line-height: 2.5em;
   color: white;
+  z-index: 10;
   .tit-menu__sub {
     margin-top: 20px;
     font-weight: 700;
@@ -130,20 +131,24 @@ body {
   }
 }
 
-.grid-menu__sub {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  &:hover {
-    color: inherit;
-  }
-  .grid-menu-lt {
+.menu-drop {
+  display: flex;
+  flex-direction: row;
+  line-height: 3em;
+  .tit-drop {
+    margin-right: 30px;
     padding-right: 30px;
     border-right: 1px solid #444444;
+    width: 150px;
+    font-weight: 700;
+    &:hover {
+      color: $color-hover-txt-sub;
+    }
   }
-  .grid-menu-rt {
-    span {
-      margin-right: 15px;
+  .item-drop {
+    margin-right: 15px;
+    &:hover {
+      color: $color-hover-txt-sub;
     }
   }
 }

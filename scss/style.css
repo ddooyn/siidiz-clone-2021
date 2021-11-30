@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Gothic A1", sans-serif;
   height: 200vh;
@@ -148,6 +149,7 @@ body {
   font-weight: 400;
   line-height: 2.5em;
   color: white;
+  z-index: 10;
 }
 
 .gnb-menu__sub .tit-menu__sub {
@@ -160,24 +162,153 @@ body {
   color: #2259f2;
 }
 
-.grid-menu__sub {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+.menu-drop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  line-height: 3em;
 }
 
-.grid-menu__sub:hover {
-  color: inherit;
-}
-
-.grid-menu__sub .grid-menu-lt {
+.menu-drop .tit-drop {
+  margin-right: 30px;
   padding-right: 30px;
   border-right: 1px solid #444444;
+  width: 150px;
+  font-weight: 700;
 }
 
-.grid-menu__sub .grid-menu-rt span {
+.menu-drop .tit-drop:hover {
+  color: #2259f2;
+}
+
+.menu-drop .item-drop {
   margin-right: 15px;
+}
+
+.menu-drop .item-drop:hover {
+  color: #2259f2;
+}
+
+.main-slide {
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 120px;
+  max-width: 1412px;
+  overflow: hidden;
+}
+
+.main-slide .txt-slide {
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 140px;
+  left: 0;
+  width: 30%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-slide .txt-slide em {
+  display: inline-block;
+  font-size: 60px;
+  line-height: 80px;
+  width: 393px;
+  letter-spacing: -3px;
+  word-break: keep-all;
+}
+
+.main-slide .txt-slide strong {
+  font-size: 70px;
+  font-weight: 900;
+  line-height: 150px;
+}
+
+.main-slide .main-shortcut {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 270px;
+  height: 120px;
+}
+
+.main-slide .main-shortcut .img-shortcut {
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-slide .main-shortcut .img-shortcut::after {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "▶";
+  color: white;
+  background-color: #002bd2;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.main-slide .main-shortcut .txt-shortcut {
+  display: inline-block;
+  width: 120px;
+  color: #999;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 700;
+  word-break: keep-all;
+}
+
+.main-slide .main-shortcut .txt-shortcut:hover {
+  color: black;
+}
+
+.main-slide .btn-slide {
+  margin-top: 210px;
+  width: 200px;
+}
+
+.main-slide .btn-slide button {
+  font-size: 19px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.main-slide .btn-slide button:hover {
+  color: #002bd2;
+}
+
+.main-slide .btn-slide button i {
+  margin: 0 5px;
+}
+
+.main-slide .img-slide {
+  float: right;
+  width: 920px;
+  height: 900px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 35px;
+  z-index: -10;
+}
+
+.list-chair {
+  border-top: 1px solid black;
 }
 /*# sourceMappingURL=style.css.map */
