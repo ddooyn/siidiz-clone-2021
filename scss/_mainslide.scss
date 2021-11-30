@@ -33,6 +33,7 @@
     width: 270px;
     height: 120px;
     .img-shortcut {
+      position: relative;
       margin: 10px;
       width: 100px;
       height: 100px;
@@ -41,15 +42,16 @@
       // 안된다ㅜㅜ
       &::after {
         display: inline-block;
+        content: "▶";
         position: absolute;
         top: 0;
         left: 0;
-        content: "▶";
-        color: white;
-        background-color: $color-hover-txt;
         width: 28px;
         height: 28px;
         border-radius: 50%;
+        font-size: 15px;
+        // color: white;
+        // background-color: $color-hover-txt;
       }
     }
     .txt-shortcut {

@@ -69,8 +69,30 @@ body {
       &:hover {
         color: $color-hover-txt;
       }
+      &:hover::before {
+        filter: invert(10%) sepia(99%) saturate(4982%) hue-rotate(229deg)
+          brightness(102%) contrast(117%);
+      }
     }
   }
+}
+
+%before-icon {
+  display: inline-block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+}
+
+.compare::before {
+  @extend %before-icon;
+  background: url("../src/img/compare.png") center / 14px 14px no-repeat;
+}
+
+.wishlist::before {
+  @extend %before-icon;
+  background: url("../src/img/wishlist.png") center / 14px 14px no-repeat;
 }
 
 .header__row-main {

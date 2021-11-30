@@ -92,6 +92,27 @@ body {
   color: #002bd2;
 }
 
+.header__row-sub .menu-sub li:hover::before {
+  -webkit-filter: invert(10%) sepia(99%) saturate(4982%) hue-rotate(229deg) brightness(102%) contrast(117%);
+          filter: invert(10%) sepia(99%) saturate(4982%) hue-rotate(229deg) brightness(102%) contrast(117%);
+}
+
+.compare::before, .wishlist::before {
+  display: inline-block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+}
+
+.compare::before {
+  background: url("../src/img/compare.png") center/14px 14px no-repeat;
+}
+
+.wishlist::before {
+  background: url("../src/img/wishlist.png") center/14px 14px no-repeat;
+}
+
 .header__row-main {
   margin: 0 auto;
   display: -webkit-box;
@@ -243,6 +264,7 @@ body {
 }
 
 .main-slide .main-shortcut .img-shortcut {
+  position: relative;
   margin: 10px;
   width: 100px;
   height: 100px;
@@ -253,15 +275,14 @@ body {
 
 .main-slide .main-shortcut .img-shortcut::after {
   display: inline-block;
+  content: "▶";
   position: absolute;
   top: 0;
   left: 0;
-  content: "▶";
-  color: white;
-  background-color: #002bd2;
   width: 28px;
   height: 28px;
   border-radius: 50%;
+  font-size: 15px;
 }
 
 .main-slide .main-shortcut .txt-shortcut {
