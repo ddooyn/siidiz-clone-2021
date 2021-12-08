@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   font-family: "Gothic A1", sans-serif;
-  height: 200vh;
+  height: 500vh;
 }
 
 .header {
@@ -217,7 +217,6 @@ body {
 .main-slide {
   position: relative;
   margin: 0 auto;
-  padding-bottom: 120px;
   max-width: 1412px;
   overflow: hidden;
 }
@@ -261,9 +260,27 @@ body {
           align-items: center;
   width: 270px;
   height: 120px;
+  position: relative;
+}
+
+.main-slide .main-shortcut::after {
+  position: absolute;
+  display: inline-block;
+  content: "▶";
+  top: 10px;
+  left: 80px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 3px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  background-color: #002bd2;
 }
 
 .main-slide .main-shortcut .img-shortcut {
+  display: block;
   position: relative;
   margin: 10px;
   width: 100px;
@@ -271,18 +288,6 @@ body {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.main-slide .main-shortcut .img-shortcut::after {
-  display: inline-block;
-  content: "▶";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  font-size: 15px;
 }
 
 .main-slide .main-shortcut .txt-shortcut {
@@ -329,7 +334,66 @@ body {
   z-index: -10;
 }
 
-.list-chair {
+.cont-chair {
+  margin-top: 120px;
   border-top: 1px solid black;
+}
+
+.cont-chair__task {
+  margin: 90px auto 0;
+  padding: 0 10px;
+  max-width: 1220px;
+}
+
+.cont-chair__task h2 {
+  margin-bottom: 40px;
+  display: inline-block;
+  font-size: 34px;
+}
+
+.cont-chair__task .txt-more {
+  float: right;
+  font-size: 13px;
+  color: #0028d2;
+  padding-top: 15px;
+}
+
+.list-chair {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 80px 100px;
+  max-width: 1220px;
+  text-align: center;
+}
+
+.list-chair li {
+  max-width: 560px;
+}
+
+.list-chair li img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.list-chair li img:hover {
+  opacity: 80%;
+}
+
+.list-chair li strong {
+  margin: 50px 0 20px;
+  display: block;
+  font-size: 45px;
+  font-weight: 900;
+}
+
+.list-chair li em {
+  font-size: 22px;
 }
 /*# sourceMappingURL=style.css.map */

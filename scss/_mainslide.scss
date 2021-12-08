@@ -1,7 +1,6 @@
 .main-slide {
   position: relative;
   margin: 0 auto;
-  padding-bottom: 120px;
   max-width: 1412px;
   overflow: hidden;
   .txt-slide {
@@ -32,27 +31,30 @@
     align-items: center;
     width: 270px;
     height: 120px;
+    position: relative;
+    &::after {
+      position: absolute;
+      display: inline-block;
+      content: "▶";
+      top: 10px;
+      left: 80px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      font-size: 3px;
+      text-align: center;
+      line-height: 30px;
+      color: white;
+      background-color: $color-hover-txt;
+    }
     .img-shortcut {
+      display: block;
       position: relative;
       margin: 10px;
       width: 100px;
       height: 100px;
       border-radius: 50%;
       object-fit: cover;
-      // 안된다ㅜㅜ
-      &::after {
-        display: inline-block;
-        content: "▶";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        font-size: 15px;
-        // color: white;
-        // background-color: $color-hover-txt;
-      }
     }
     .txt-shortcut {
       display: inline-block;
@@ -93,8 +95,4 @@
     margin-top: 35px;
     z-index: -10;
   }
-}
-
-.list-chair {
-  border-top: 1px solid black;
 }
