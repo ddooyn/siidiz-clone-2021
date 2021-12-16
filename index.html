@@ -1,6 +1,4 @@
-<!-- - 마크업 순서 다시 고려
-- 아이콘 넣기
-- fieldset 넣어보기
+<!--
 - scss 준홍님 공유해주신 사이트 참고해서 폴더 구성
 - scss 은정멘토님 코드 참고해서 flex mixin쓰기  -->
 
@@ -40,7 +38,7 @@
             <label for="search" class="sr-only">검색 입력창</label>
             <button class="btn-search">SEARCH</button>
           </form>
-          <nav>
+          <nav class="mb-hide">
             <ul class="menu-sub">
               <li><a href="javascript:void(0)">로그인</a></li>
               <li><a href="javascript:void(0)">회원가입</a></li>
@@ -229,7 +227,7 @@
           </div>
         </aside>
         <a href="javascript:void(0)"
-          ><img class="img-slide" src="src/img/main2.jpg" alt="제품사진"
+          ><img class="img-slide" src="src/img/main1.jpg" alt="제품사진"
         /></a>
       </section>
       <section class="cont-chair">
@@ -270,7 +268,72 @@
           </ul>
         </article>
       </section>
-      <section class="cont-chair"></section>
+      <section class="cont-chair second">
+        <article class="cont-chair__kids">
+          <header>
+            <h2>KIDS CHAIR</h2>
+            <a href="javascript:void(0)" class="txt-more">ALL PRODUCTS</a>
+          </header>
+          <ul class="list-chair col3">
+            <li>
+              <a href="javascript:void(0)"
+                ><img src="src/img/kids.jpg" alt="아동용 의자 사진 1"
+              /></a>
+              <strong>molti</strong>
+              <em>앉음마부터 좋은 자세로</em>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                ><img src="src/img/kids.jpg" alt="아동용 의자 사진 2"
+              /></a>
+              <strong>atti</strong>
+              <em>플레이 체어</em>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                ><img src="src/img/kids.jpg" alt="아동용 의자 사진 3"
+              /></a>
+              <strong>ringo</strong>
+              <em>생각이 자라는 의자</em>
+            </li>
+          </ul>
+        </article>
+        <article class="cont-chair__interior">
+          <header>
+            <h2>INTERIOR CHAIR</h2>
+            <a href="javascript:void(0)" class="txt-more">ALL PRODUCTS</a>
+          </header>
+          <ul class="list-chair col3">
+            <li>
+              <a href="javascript:void(0)"
+                ><img src="src/img/interior.jpg" alt="인테리어 의자 사진 1"
+              /></a>
+              <strong>OUI</strong>
+              <em>프리미엄 바스툴</em>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                ><img src="src/img/interior.jpg" alt="인테리어 의자 사진 2"
+              /></a>
+              <strong>SPOON</strong>
+              <em>내추럴 다이닝의 완성</em>
+            </li>
+            <li>
+              <a href="javascript:void(0)"
+                ><img src="src/img/interior.jpg" alt="인테리어 의자 사진 3"
+              /></a>
+              <strong>EGA</strong>
+              <em>나만을 위한 아늑함</em>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="news-promotion">
+        뉴우스
+      </section>
     </main>
+    <footer>
+      푸우터
+    </footer>
   </body>
 </html>

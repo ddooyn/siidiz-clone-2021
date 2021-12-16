@@ -3,7 +3,7 @@
   border-top: 1px solid black;
 }
 
-.cont-chair__task {
+%cont-chair-base {
   margin: 90px auto 0;
   padding: 0 10px;
   max-width: 1220px;
@@ -17,18 +17,19 @@
     font-size: 13px;
     color: #0028d2;
     padding-top: 15px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
-.list-chair {
+%list-chair-base {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 80px 100px;
   max-width: 1220px;
   text-align: center;
   li {
-    max-width: 560px;
     img {
       width: 100%;
       // height: 600px;
@@ -47,4 +48,28 @@
       font-size: 22px;
     }
   }
+}
+
+.cont-chair__task, .cont-chair__kids, .cont-chair__interior {
+  @extend %cont-chair-base;
+}
+
+.list-chair {
+  @extend %list-chair-base;
+  flex-wrap: wrap;
+  li {
+    max-width: 560px;
+  }
+}
+
+.list-chair.col3 {
+  @extend %list-chair-base;
+  flex-wrap: nowrap;
+  li {
+    max-width: 340px;
+  }
+}
+
+.cont-chair__interior {
+  margin: 200px auto 120px;
 }
