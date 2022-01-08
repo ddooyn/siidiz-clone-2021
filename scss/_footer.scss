@@ -1,0 +1,107 @@
+footer {
+    display: flex;
+    padding: 70px 0 120px;
+    background-color: #141414;
+    color: #fff;
+    .wrap-footer {
+        @extend %news-base;
+        justify-content: flex-start;
+        .footer-logo {
+            display: block;
+            margin-bottom : 40px;
+        }
+        .info-company {
+            width: 366px;
+            font-size: 14px;
+        }
+        strong {
+            display: block;
+            margin: 1.6em 0;
+            font-size: 15px;
+            font-weight: 700;
+        }
+        dl {
+            display: block;
+            letter-spacing: -1px;
+            font-size: 13px;
+            margin-bottom: 10px;
+            dt {
+                float: left;
+                &::after {
+                    display: inline-block;
+                    content: '·';
+                    width: 3px;
+                    height: 3px;
+                    margin: 0 3px;
+                }
+            }
+        }
+        .mt {
+            margin-top: 30px;
+        }
+        .last {
+            margin-bottom: 50px;
+        }
+        em {
+            font-weight: 700;
+        }
+    }
+}
+.nav-info {
+    .footer-nav_sns {
+        display: flex;
+        margin-bottom: 45px;
+        li {
+            display: inline-block;
+            margin-left: 25px;
+            &:first-child {
+                margin-left: auto;
+            }
+        }
+    }
+    .footer-nav_policy {
+        display: flex;
+        font-size: 13px;
+        text-decoration: underline;
+        .blue {
+            margin-left: 74px;
+            color: #1a59ff;
+        }
+    }
+    .footer-nav_g {
+        & > li {
+            float: left;
+            margin: 40px 65px 0 0;
+            font-size: 15px;
+            font-weight: 700;
+            height: 120px;
+            &:last-child {
+                margin-right: 0;
+            }
+            ul, p , strong {
+                display: block;
+                font-size: 13px;
+                font-weight: 400;
+            }
+            ul {
+                margin-top: 30px;
+                li {
+                    margin-bottom: 1.2em;
+                }
+            }
+            .contact {
+                display: block;
+                margin: 30px 0 30px 0;
+                font-size: 24px;
+            }
+            p {
+                margin-bottom: 1.2em;
+            }
+            .lunch {
+                margin-bottom: 2.4em;
+                color: #999;
+                font-size: 12px;
+            }
+        }
+    }
+}
