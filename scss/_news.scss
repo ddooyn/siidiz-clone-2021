@@ -1,7 +1,143 @@
-.news-promotion{
-    text-align: center;
+.news-promotion {
     padding: 80px 0 120px;
     background-color: #F5F5F5;
+}
+
+%news-base {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1220px;
+}
+
+.sect-news {
+    @extend %news-base;
+    margin-bottom: 80px;
+    padding-right: 1em;
+    background-color: #DDE6FF;
+    height: 60px;
+    h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12%;
+        height: 100%;
+        background-color: #002BD2;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    p, span {
+        display: inline-block;
+        font-size: 14px;
+    }
+    p {
+        margin-right: 1em;
+        font-weight: 700;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    span {
+        color: #555;
+    }
+    .view-all {
+        text-decoration: underline;
+        &:hover {
+            color: $color-hover-txt;
+        }
+    }
+}
+
+.sect-insta {
+    @extend %news-base;
+    flex-direction: column;
+    align-items: flex-start;
+    .insta-feed {
+        display: flex;
+        justify-content: space-between;
+        margin: 45px auto 95px;
+        img {
+            margin-right: 20px;
+            width: 228px;
+            height: 228px;
+            &:hover {
+                opacity: 90%;
+            }
+        }
+    }
+}
+
+.insta-account {
+    position: relative;
+    margin: 20px 0 0 60px;
+    font-size: 18px;
+    font-weight: 700;
+    &::before {
+        content: 'SIIDIZ';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -20px;
+        left: -70px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #000;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+    }
+}
+
+.sect-blog {
+    @extend %news-base;
+    align-items: flex-start;
+    strong {
+        display: block;
+        margin: 45px 0 25px 0;
+        width: 330px;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.5em;
+        word-break: keep-all;
+    }
+    p {
+        display: -webkit-box;
+        margin-bottom: 30px;
+        max-width: 390px;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        color: #555;
+        font-size: 14.5px;
+        line-height: 1.4em;
+        overflow: hidden;
+    }
+    img {
+        width: 620px;
+        height: 350px;
+        object-fit: cover;
+    }
+    a {
+        color: $color-hover-txt;
+        font-size: 13px;
+        text-decoration: underline;
+    }
+}
+
+.insta-account.tip {
+    margin-left: 45px;
+    font-weight: 400;
+    &:before {
+        content: '';
+        top: -6px;
+        left: -45px;
+        width: 30px;
+        height: 30px;
+        background: url("../src/img/blog.png");
+    }
 }
 
 footer {

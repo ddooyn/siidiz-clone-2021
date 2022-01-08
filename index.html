@@ -1,339 +1,334 @@
-<!--
-- scss 준홍님 공유해주신 사이트 참고해서 폴더 구성
-- scss 은정멘토님 코드 참고해서 flex mixin쓰기  -->
-
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>시이디즈 쇼핑몰</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700;900&family=Noto+Sans+KR:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="src/reset.css" />
-    <link rel="stylesheet" href="scss/style.css" />
-  </head>
 
-  <body>
-    <header class="header">
-      <h2 class="sr-only">시이디즈 상단 메뉴</h2>
-      <section class="row-wrap">
-        <article class="header__row-sub">
-          <form action="" method="get" class="form-search">
-            <input
-              type="text"
-              autocomplete="off"
-              id="search"
-              class="inp-search"
-            />
-            <label for="search" class="sr-only">검색 입력창</label>
-            <button class="btn-search">SEARCH</button>
-          </form>
-          <nav class="mb-hide">
-            <ul class="menu-sub">
-              <li><a href="javascript:void(0)">로그인</a></li>
-              <li><a href="javascript:void(0)">회원가입</a></li>
-              <li><a href="javascript:void(0)">이벤트</a></li>
-              <li><a href="javascript:void(0)" class="compare">비교하기</a></li>
-              <li>
-                <a href="javascript:void(0)" class="wishlist">장바구니</a>
-              </li>
-            </ul>
-          </nav>
-        </article>
-      </section>
-      <section class="row-wrap">
-        <article class="header__row-main">
-          <h1><a href="index.html">SIIDIZ</a></h1>
-          <nav>
-            <ul class="gnb-main">
-              <li class="gnb-menu">
-                ABOUT SIIDIZ
-                <ul class="gnb-menu__sub">
-                  <li>BRAND STORY</li>
-                  <li>NEWS</li>
-                  <li class="tit-menu__sub">특별관</li>
-                  <li>월간윤종신</li>
-                  <li>기대요 프로젝트</li>
-                  <li>T50 10주년</li>
-                </ul>
-              </li>
-              <li class="gnb-menu">
-                PRODUCTS
-                <ul class="gnb-menu__sub">
-                  <li>
-                    <ul class="menu-drop">
-                      <li class="tit-drop">모든 제품보기</li>
-                      <li class="item-drop"><a href="">SMART FINDER</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="menu-drop">
-                      <li class="tit-drop">브랜드 콜라보레이션</li>
-                      <li class="item-drop"><a href="">마블</a></li>
-                      <li class="item-drop"><a href="">디즈니</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="menu-drop">
-                      <li class="tit-drop">
-                        <a href="">마블x시디즈 태스크</a>
-                      </li>
-                      <li class="item-drop"><a href="">T80</a></li>
-                      <li class="item-drop"><a href="">T50</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="menu-drop">
-                      <li class="tit-drop">
-                        <a href="">디즈니x시디즈 태스크</a>
-                      </li>
-                      <li class="item-drop"><a href="">atti</a></li>
-                      <li class="item-drop"><a href="">ringo cover</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="menu-drop">
-                      <li class="tit-drop"><a href="">사무용의자</a></li>
-                      <li class="item-drop"><a href="">T80</a></li>
-                      <li class="item-drop"><a href="">T55</a></li>
-                      <li class="item-drop"><a href="">T50 AIR</a></li>
-                      <li class="item-drop"><a href="">T50</a></li>
-                      <li class="item-drop"><a href="">T40</a></li>
-                      <li class="item-drop"><a href="">T25</a></li>
-                      <li class="item-drop"><a href="">TAB SQUARE</a></li>
-                      <li class="item-drop"><a href="">TAB PLUS</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="menu-drop">
-                      <li class="tit-drop"><a href="">학생용의자</a></li>
-                      <li class="item-drop"><a href="">ringo</a></li>
-                      <li class="item-drop"><a href="">mitto</a></li>
-                      <li class="item-drop"><a href="">ible</a></li>
-                      <li class="item-drop"><a href="">T25</a></li>
-                      <li class="item-drop"><a href="">T50</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="menu-drop">
-                      <li class="tit-drop"><a href="">유아용의자</a></li>
-                      <li class="item-drop"><a href="">molti</a></li>
-                      <li class="item-drop"><a href="">atti</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="menu-drop">
-                      <li class="tit-drop"><a href="">중역용의자</a></li>
-                      <li class="item-drop"><a href="">PRONARD</a></li>
-                      <li class="item-drop"><a href="">VESTO</a></li>
-                      <li class="item-drop"><a href="">CELIOS</a></li>
-                      <li class="item-drop"><a href="">NUO</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="menu-drop">
-                      <li class="tit-drop">
-                        <a href="">회의실/컨퍼런스의자</a>
-                      </li>
-                      <li class="item-drop"><a href="">T50 side</a></li>
-                      <li class="item-drop"><a href="">T40 side</a></li>
-                      <li class="item-drop"><a href="">T30 side</a></li>
-                      <li class="item-drop"><a href="">LoLLY</a></li>
-                      <li class="item-drop"><a href="">NOOI</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="menu-drop">
-                      <li class="tit-drop"><a href="">인테리어의자</a></li>
-                      <li class="item-drop"><a href="">BUTTON</a></li>
-                      <li class="item-drop"><a href="">SPOON</a></li>
-                      <li class="item-drop"><a href="">MANE</a></li>
-                      <li class="item-drop"><a href="">EGA</a></li>
-                      <li class="item-drop"><a href="">M06</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="menu-drop">
-                      <li class="tit-drop"><a href="">스툴/좌식의자</a></li>
-                      <li class="item-drop"><a href="">FUNGUS</a></li>
-                      <li class="item-drop"><a href="">PILLO</a></li>
-                      <li class="item-drop"><a href="">OUI</a></li>
-                      <li class="item-drop"><a href="">M05</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="menu-drop">
-                      <li class="tit-drop"><a href="">액세서리</a></li>
-                      <li class="item-drop"><a href="">headrest</a></li>
-                      <li class="item-drop"><a href="">hanger</a></li>
-                      <li class="item-drop"><a href="">cover·cushion</a></li>
-                      <li class="item-drop"><a href="">caster·glide</a></li>
-                      <li class="item-drop"><a href="">footrest</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="gnb-menu">
-                SUPPORT
-                <ul class="gnb-menu__sub">
-                  <li>FAQ</li>
-                  <li>친절상담</li>
-                  <li>A/S 신청</li>
-                  <li>A/S 안내</li>
-                  <li>매장 찾기</li>
-                  <li>품질 보증 서비스</li>
-                  <li>제품설명서 다운로드</li>
-                  <li>카탈로그 다운로드</li>
-                  <li>사업제안</li>
-                  <li>대리점 개설문의</li>
-                  <li>대량 구매 문의</li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-        </article>
-      </section>
-    </header>
-    <main>
-      <section class="main-slide">
-        <aside class="txt-slide">
-          <em>의자 위 인생은 진행중</em>
-          <strong>SIIDIZ</strong>
-          <a href="javascript:void(0)" class="wrap-shorcut">
-            <div class="main-shortcut">
-              <img class="img-shortcut" src="src/img/mini1.jpg" alt="" />
-              <span class="txt-shortcut">브랜드 캠페인 영상 바로가기</span>
-            </div>
-          </a>
-          <div class="btn-slide">
-            <button class="btn-prev">
-              <i class="bi bi-chevron-left"></i>
-              PREV
-            </button>
-            <button class="btn-next">
-              NEXT
-              <i class="bi bi-chevron-right"></i>
-            </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>시이디즈 쇼핑몰</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700;900&family=Noto+Sans+KR:wght@300&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="src/reset.css" />
+  <link rel="stylesheet" href="scss/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <section class="row-wrap">
+      <article class="header__row-sub">
+        <form action="" method="get" class="form-search">
+          <input type="text" autocomplete="off" id="search" class="inp-search" />
+          <label for="search" class="sr-only">검색 입력창</label>
+          <button class="btn-search">SEARCH</button>
+        </form>
+        <nav class="mb-hide">
+          <ul class="menu-sub">
+            <li><a href="javascript:void(0)">로그인</a></li>
+            <li><a href="javascript:void(0)">회원가입</a></li>
+            <li><a href="javascript:void(0)">이벤트</a></li>
+            <li><a href="javascript:void(0)" class="compare">비교하기</a></li>
+            <li>
+              <a href="javascript:void(0)" class="wishlist">장바구니</a>
+            </li>
+          </ul>
+        </nav>
+      </article>
+    </section>
+    <section class="row-wrap">
+      <article class="header__row-main">
+        <h1><a href="index.html">SIIDIZ</a></h1>
+        <nav>
+          <ul class="gnb-main">
+            <li class="gnb-menu">
+              ABOUT SIIDIZ
+              <ul class="gnb-menu__sub">
+                <li>BRAND STORY</li>
+                <li>NEWS</li>
+                <li class="tit-menu__sub">특별관</li>
+                <li>월간윤종신</li>
+                <li>기대요 프로젝트</li>
+                <li>T50 10주년</li>
+              </ul>
+            </li>
+            <li class="gnb-menu">
+              PRODUCTS
+              <ul class="gnb-menu__sub">
+                <li>
+                  <ul class="menu-drop">
+                    <li class="tit-drop">모든 제품보기</li>
+                    <li class="item-drop"><a href="">SMART FINDER</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="menu-drop">
+                    <li class="tit-drop">브랜드 콜라보레이션</li>
+                    <li class="item-drop"><a href="">마블</a></li>
+                    <li class="item-drop"><a href="">디즈니</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="menu-drop">
+                    <li class="tit-drop">
+                      <a href="">마블x시디즈 태스크</a>
+                    </li>
+                    <li class="item-drop"><a href="">T80</a></li>
+                    <li class="item-drop"><a href="">T50</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="menu-drop">
+                    <li class="tit-drop">
+                      <a href="">디즈니x시디즈 태스크</a>
+                    </li>
+                    <li class="item-drop"><a href="">atti</a></li>
+                    <li class="item-drop"><a href="">ringo cover</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="menu-drop">
+                    <li class="tit-drop"><a href="">사무용의자</a></li>
+                    <li class="item-drop"><a href="">T80</a></li>
+                    <li class="item-drop"><a href="">T55</a></li>
+                    <li class="item-drop"><a href="">T50 AIR</a></li>
+                    <li class="item-drop"><a href="">T50</a></li>
+                    <li class="item-drop"><a href="">T40</a></li>
+                    <li class="item-drop"><a href="">T25</a></li>
+                    <li class="item-drop"><a href="">TAB SQUARE</a></li>
+                    <li class="item-drop"><a href="">TAB PLUS</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="menu-drop">
+                    <li class="tit-drop"><a href="">학생용의자</a></li>
+                    <li class="item-drop"><a href="">ringo</a></li>
+                    <li class="item-drop"><a href="">mitto</a></li>
+                    <li class="item-drop"><a href="">ible</a></li>
+                    <li class="item-drop"><a href="">T25</a></li>
+                    <li class="item-drop"><a href="">T50</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="menu-drop">
+                    <li class="tit-drop"><a href="">유아용의자</a></li>
+                    <li class="item-drop"><a href="">molti</a></li>
+                    <li class="item-drop"><a href="">atti</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="menu-drop">
+                    <li class="tit-drop"><a href="">중역용의자</a></li>
+                    <li class="item-drop"><a href="">PRONARD</a></li>
+                    <li class="item-drop"><a href="">VESTO</a></li>
+                    <li class="item-drop"><a href="">CELIOS</a></li>
+                    <li class="item-drop"><a href="">NUO</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="menu-drop">
+                    <li class="tit-drop">
+                      <a href="">회의실/컨퍼런스의자</a>
+                    </li>
+                    <li class="item-drop"><a href="">T50 side</a></li>
+                    <li class="item-drop"><a href="">T40 side</a></li>
+                    <li class="item-drop"><a href="">T30 side</a></li>
+                    <li class="item-drop"><a href="">LoLLY</a></li>
+                    <li class="item-drop"><a href="">NOOI</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="menu-drop">
+                    <li class="tit-drop"><a href="">인테리어의자</a></li>
+                    <li class="item-drop"><a href="">BUTTON</a></li>
+                    <li class="item-drop"><a href="">SPOON</a></li>
+                    <li class="item-drop"><a href="">MANE</a></li>
+                    <li class="item-drop"><a href="">EGA</a></li>
+                    <li class="item-drop"><a href="">M06</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="menu-drop">
+                    <li class="tit-drop"><a href="">스툴/좌식의자</a></li>
+                    <li class="item-drop"><a href="">FUNGUS</a></li>
+                    <li class="item-drop"><a href="">PILLO</a></li>
+                    <li class="item-drop"><a href="">OUI</a></li>
+                    <li class="item-drop"><a href="">M05</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="menu-drop">
+                    <li class="tit-drop"><a href="">액세서리</a></li>
+                    <li class="item-drop"><a href="">headrest</a></li>
+                    <li class="item-drop"><a href="">hanger</a></li>
+                    <li class="item-drop"><a href="">cover·cushion</a></li>
+                    <li class="item-drop"><a href="">caster·glide</a></li>
+                    <li class="item-drop"><a href="">footrest</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="gnb-menu">
+              SUPPORT
+              <ul class="gnb-menu__sub">
+                <li>FAQ</li>
+                <li>친절상담</li>
+                <li>A/S 신청</li>
+                <li>A/S 안내</li>
+                <li>매장 찾기</li>
+                <li>품질 보증 서비스</li>
+                <li>제품설명서 다운로드</li>
+                <li>카탈로그 다운로드</li>
+                <li>사업제안</li>
+                <li>대리점 개설문의</li>
+                <li>대량 구매 문의</li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </article>
+    </section>
+  </header>
+  <main>
+    <section class="main-slide">
+      <aside class="txt-slide">
+        <em>의자 위 인생은 진행중</em>
+        <strong>SIIDIZ</strong>
+        <a href="javascript:void(0)" class="wrap-shorcut">
+          <div class="main-shortcut">
+            <img class="img-shortcut" src="src/img/mini1.jpg" alt="" />
+            <span class="txt-shortcut">브랜드 캠페인 영상 바로가기</span>
           </div>
-        </aside>
-        <a href="javascript:void(0)"
-          ><img class="img-slide" src="src/img/main1.jpg" alt="제품사진"
-        /></a>
-      </section>
-      <section class="cont-chair">
-        <article class="cont-chair__task">
-          <header>
-            <h2>TASK CHAIR</h2>
-            <a href="javascript:void(0)" class="txt-more">ALL PRODUCTS</a>
-          </header>
-          <ul class="list-chair">
-            <li>
-              <a href="javascript:void(0)"
-                ><img src="src/img/task1.jpg" alt="T80 의자 사진"
-              /></a>
-              <strong>T80</strong>
-              <em>ULTIMATE CHAIR</em>
-            </li>
-            <li>
-              <a href="javascript:void(0)"
-                ><img src="src/img/task3.jpg" alt="T50 의자 사진"
-              /></a>
-              <strong>T50</strong>
-              <em>좋은 의자의 기본</em>
-            </li>
-            <li>
-              <a href="javascript:void(0)"
-                ><img src="src/img/task2.jpg" alt="TAB PLUS 의자 사진"
-              /></a>
-              <strong>TAB PLUS</strong>
-              <em>혼자서도 손쉽게</em>
-            </li>
-            <li>
-              <a href="javascript:void(0)"
-                ><img src="src/img/task4.jpg" alt="T40 의자 사진"
-              /></a>
-              <strong>T40</strong>
-              <em>꼭 필요한 기능만</em>
-            </li>
-          </ul>
-        </article>
-      </section>
-      <section class="cont-chair second">
-        <article class="cont-chair__kids">
-          <header>
-            <h2>KIDS CHAIR</h2>
-            <a href="javascript:void(0)" class="txt-more">ALL PRODUCTS</a>
-          </header>
-          <ul class="list-chair col3">
-            <li>
-              <a href="javascript:void(0)"
-                ><img src="src/img/kids.jpg" alt="아동용 의자 사진 1"
-              /></a>
-              <strong>molti</strong>
-              <em>앉음마부터 좋은 자세로</em>
-            </li>
-            <li>
-              <a href="javascript:void(0)"
-                ><img src="src/img/kids.jpg" alt="아동용 의자 사진 2"
-              /></a>
-              <strong>atti</strong>
-              <em>플레이 체어</em>
-            </li>
-            <li>
-              <a href="javascript:void(0)"
-                ><img src="src/img/kids.jpg" alt="아동용 의자 사진 3"
-              /></a>
-              <strong>ringo</strong>
-              <em>생각이 자라는 의자</em>
-            </li>
-          </ul>
-        </article>
-        <article class="cont-chair__interior">
-          <header>
-            <h2>INTERIOR CHAIR</h2>
-            <a href="javascript:void(0)" class="txt-more">ALL PRODUCTS</a>
-          </header>
-          <ul class="list-chair col3">
-            <li>
-              <a href="javascript:void(0)"
-                ><img src="src/img/interior.jpg" alt="인테리어 의자 사진 1"
-              /></a>
-              <strong>OUI</strong>
-              <em>프리미엄 바스툴</em>
-            </li>
-            <li>
-              <a href="javascript:void(0)"
-                ><img src="src/img/interior.jpg" alt="인테리어 의자 사진 2"
-              /></a>
-              <strong>SPOON</strong>
-              <em>내추럴 다이닝의 완성</em>
-            </li>
-            <li>
-              <a href="javascript:void(0)"
-                ><img src="src/img/interior.jpg" alt="인테리어 의자 사진 3"
-              /></a>
-              <strong>EGA</strong>
-              <em>나만을 위한 아늑함</em>
-            </li>
-          </ul>
-        </article>
-      </section>
-      <section class="news-promotion">
-        뉴우스
-      </section>
-    </main>
-    <footer>
-      푸우터
-    </footer>
-  </body>
+        </a>
+        <div class="btn-slide">
+          <button class="btn-prev">
+            <i class="bi bi-chevron-left"></i>
+            PREV
+          </button>
+          <button class="btn-next">
+            NEXT
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </aside>
+      <a href="javascript:void(0)"><img class="img-slide" src="src/img/main1.jpg" alt="제품사진" /></a>
+    </section>
+    <section class="cont-chair">
+      <h2 class="sr-only">상품 소개</h2>
+      <article class="cont-chair__task">
+        <header>
+          <h3>TASK CHAIR</h3>
+          <a href="javascript:void(0)" class="txt-more">ALL PRODUCTS</a>
+        </header>
+        <ul class="list-chair">
+          <li>
+            <a href="javascript:void(0)"><img src="src/img/task1.jpg" alt="T80 의자 사진" /></a>
+            <strong>T80</strong>
+            <em>ULTIMATE CHAIR</em>
+          </li>
+          <li>
+            <a href="javascript:void(0)"><img src="src/img/task3.jpg" alt="T50 의자 사진" /></a>
+            <strong>T50</strong>
+            <em>좋은 의자의 기본</em>
+          </li>
+          <li>
+            <a href="javascript:void(0)"><img src="src/img/task2.jpg" alt="TAB PLUS 의자 사진" /></a>
+            <strong>TAB PLUS</strong>
+            <em>혼자서도 손쉽게</em>
+          </li>
+          <li>
+            <a href="javascript:void(0)"><img src="src/img/task4.jpg" alt="T40 의자 사진" /></a>
+            <strong>T40</strong>
+            <em>꼭 필요한 기능만</em>
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="cont-chair second">
+      <article class="cont-chair__kids">
+        <header>
+          <h3>KIDS CHAIR</h3>
+          <a href="javascript:void(0)" class="txt-more">ALL PRODUCTS</a>
+        </header>
+        <ul class="list-chair col3">
+          <li>
+            <a href="javascript:void(0)"><img src="src/img/kids.jpg" alt="아동용 의자 사진 1" /></a>
+            <strong>molti</strong>
+            <em>앉음마부터 좋은 자세로</em>
+          </li>
+          <li>
+            <a href="javascript:void(0)"><img src="src/img/kids.jpg" alt="아동용 의자 사진 2" /></a>
+            <strong>atti</strong>
+            <em>플레이 체어</em>
+          </li>
+          <li>
+            <a href="javascript:void(0)"><img src="src/img/kids.jpg" alt="아동용 의자 사진 3" /></a>
+            <strong>ringo</strong>
+            <em>생각이 자라는 의자</em>
+          </li>
+        </ul>
+      </article>
+      <article class="cont-chair__interior">
+        <header>
+          <h3>INTERIOR CHAIR</h3>
+          <a href="javascript:void(0)" class="txt-more">ALL PRODUCTS</a>
+        </header>
+        <ul class="list-chair col3">
+          <li>
+            <a href="javascript:void(0)"><img src="src/img/interior.jpg" alt="인테리어 의자 사진 1" /></a>
+            <strong>OUI</strong>
+            <em>프리미엄 바스툴</em>
+          </li>
+          <li>
+            <a href="javascript:void(0)"><img src="src/img/interior.jpg" alt="인테리어 의자 사진 2" /></a>
+            <strong>SPOON</strong>
+            <em>내추럴 다이닝의 완성</em>
+          </li>
+          <li>
+            <a href="javascript:void(0)"><img src="src/img/interior.jpg" alt="인테리어 의자 사진 3" /></a>
+            <strong>EGA</strong>
+            <em>나만을 위한 아늑함</em>
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="news-promotion">
+      <article class="sect-news">
+        <h2>NEWS</h2>
+        <div>
+          <a href="javascript:void(0)">
+            <p>시디즈 이용약관 및 개인정보 처리방침 개정 사전안내</p>
+          </a>
+          <span>2021.03.23</span>
+        </div>
+        <a href="javascript:void(0)"><span class="view-all">전체보기</span></a>
+      </article>
+      <article class="sect-insta">
+        <a href="javascript:void(0)"><span class="insta-account">@siidiz_official</span></a>
+        <div class="insta-feed">
+          <a href="javascript:void(0)"><img src="src/img/cat.jpg" alt="인스타 피드1"></a>
+          <a href="javascript:void(0)"><img src="src/img/cat.jpg" alt="인스타 피드2"></a>
+          <a href="javascript:void(0)"><img src="src/img/cat.jpg" alt="인스타 피드3"></a>
+          <a href="javascript:void(0)"><img src="src/img/cat.jpg" alt="인스타 피드4"></a>
+          <a href="javascript:void(0)"><img src="src/img/cat.jpg" alt="인스타 피드5"></a>
+        </div>
+      </article>
+      <article class="sect-blog">
+        <div>
+          <span class="insta-account tip">CHAIR CHOICE TIP</span>
+          <strong>나에게 꼭 맞는 퍼스널 체어 선택 Tip 3</strong>
+          <p>현대인의 고질병 중 하나인 허리 통증. 연령과 성별을 불문하고 나타나는 증상입니다. 직장인들의 경우 10명 중 4명 이상이 허리 통증으로 고통받고 있다고 합니다. 이를 해결할 수 있는 방법으로</p>
+          <a href="javascript:void(0)">LEARN MORE</a>
+        </div>
+        <img src="src/img/personal.jpg" alt="">
+      </article>
+    </section>
+  </main>
+  <footer>
+    푸우터
+  </footer>
+</body>
+
 </html>
